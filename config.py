@@ -31,9 +31,117 @@ RSS_FEEDS = [
 
 # Domains of sources considered trustworthy for ranking
 TRUSTED_DOMAINS = [
-    "elpais.com", "elmundo.es", "lavanguardia.com", "abc.es", "elconfidencial.com",
-    "elperiodico.com", "europapress.es", "rtve.es", "bbc.com", "cnnespanol.cnn.com"
+    "elpais.com",
+    "publico.es",
+    "eldiario.es",
+    "infolibre.es",
+    "elplural.com",
+    "ctxt.es",
+    "eldiarioandalucia.es",
+    "nuevatribuna.es",
+    "cuartopoder.es",
+
+    "rtve.es",
+    "europapress.es",
+    "efe.com",
+    "lavanguardia.com",
+    "elperiodico.com",
+    "20minutos.es",
+    "elindependiente.com",
+    "vozpopuli.com",
+    "diariodesevilla.es",
+    "diaridetarragona.com",
+
+    "elmundo.es",
+    "abc.es",
+    "okdiario.com",
+    "elespanol.com",
+    "elconfidencial.com",
+    "elconfidencialdigital.com",
+    "libertaddigital.com",
+    "periodistadigital.com",
+    "esdiario.com",
+    "larazon.es",
+
+    "expansion.com",
+    "cincodias.elpais.com",
+    "eleconomista.es",
+    "bolsamania.com",
+    "invertia.com",
+
+    "agenciasinc.es",
+    "nationalgeographic.es",
+    "muyinteresante.es",
+    "investigacionyciencia.es",
+
+    "bbc.com/mundo",
+    "cnnespanol.cnn.com",
+    "dw.com/es",
+    "france24.com/es",
+    "elpaisamerica.com",
+    "reuters.com",
+    "apnews.com",
+    "theguardian.com",
+    "nytimes.com",
+    "wsj.com",
+    "financialtimes.com",
+    "ft.com",
+    "lemonde.fr",
+    "clarin.com",
+    "infobae.com",
+    "eluniversal.com.mx",
+    "eltiempo.com",
+    "elcomercio.pe",
+
+    "lavozdegalicia.es",
+    "heraldo.es",
+    "lanuevaespana.es",
+    "elimparcial.es",
+    "diariovasco.com",
+    "diaridegirona.cat",
+    "diariocordoba.com",
+    "diariodemallorca.es",
+    "ultimahora.es",
+    "canarias7.es",
+    "laprovincia.es",
+    "menorca.info",
+    "diariodeleon.es",
+    "elnortedecastilla.es",
+    "huelvainformacion.es",
+    "granadahoy.com",
+    "malagahoy.es",
+    "sur.es",
+    "laverdad.es",
+    "informacion.es",
+    "levante-emv.com",
+    "lasprovincias.es",
+    "diariodemurcia.es",
+    "elcomercio.es",
+    "segre.com",
+    "elperiodicomediterraneo.com",
+    "ideal.es",
+
+    "cadenaser.com",
+    "cope.es",
+    "ondacero.es",
+    "rtvc.es",
+    "canalsur.es",
+    "radiocable.com",
+    "rac1.cat",
+    "ccma.cat",
+    "rtva.es",
+    "rtvv.es",
+    "rnec.es",
+    "telemadrid.es",
+    "aragontv.es",
+    "tvcatalunya.com",
+    "eitb.eus",
+    "canalsur.es",
+    "castillalamancha.es"
 ]
+
+
+
 
 # --- AI PARAMETERS ---
 OPENAI_MODEL = "gpt-4o-mini"  # modern, fast, cost-effective
@@ -63,3 +171,13 @@ MIN_KEYWORD_LENGTH = 4
 NEWSAPI_SEARCH_IN_TITLE = True  # if True, adds searchIn=title
 # Optionally run a second pass in English (off by default)
 ENABLE_ENGLISH_PASS = False
+
+# --- PROMPT / FILTER TERMS ---
+# Title phrases to avoid (used in both prompt and client-side safeguard)
+STOP_TITLE_TERMS = [
+    "en directo",
+    "última hora",
+    "ultima hora",
+    "minuto a minuto",
+    "en vivo",
+]
